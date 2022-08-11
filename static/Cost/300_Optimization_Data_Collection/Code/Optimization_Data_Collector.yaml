@@ -199,7 +199,6 @@ Conditions:
     - !Condition DeployRDSUtilizationModule
     - !Condition DeployEcsChargebackModule
     - !Condition DeployBudgetsModule
-    - !Condition DeployRDSUtilizationModule
   ComputeOptimizerRegionsIsEmpty: !Equals
     - !Join [ '', !Split [ ' ', !Ref ComputeOptimizerRegions  ] ] # remove spaces
     - ""
