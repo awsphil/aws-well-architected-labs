@@ -85,8 +85,6 @@ Resources:
                  - !Sub arn:aws:sqs:${AWS::Region}:${AWS::AccountId}:EC2UtilizationModule-TaskQueue
                  - !Sub arn:aws:sqs:${AWS::Region}:${AWS::AccountId}:BudgetsModule-TaskQueue
                  - !Sub arn:aws:sqs:${AWS::Region}:${AWS::AccountId}:TransitGatewayModule-TaskQueue
-                 
-
   LambdaFunction:
     Type: AWS::Lambda::Function
     Properties:
@@ -190,7 +188,6 @@ Resources:
           SQS_URL: !Ref TaskQueuesUrl
           ROLE: !Ref ManagementRoleName
           MANAGEMENT_ACCOUNT_IDS: !Ref ManagementAccountID
-
   CloudWatchTrigger:
     Type: AWS::Events::Rule
     Properties:
